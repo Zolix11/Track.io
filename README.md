@@ -1,34 +1,43 @@
 # Track.io
 BME témalabor csoportos app
+</br>
+# Első alkalom:
+ Főbb funkciók átbeszélése, azokhoz információk gyűjtése és design ötletelés.
+ Felhasználói klien és admin kliens átbeszélése, tervezése.
+</br>
 
-## Első alkalom
-Főbb funkciók:
-• Sportolás:
- Regisztráció (alap adatok megadása, személyes profil(testsúly, magasság, nem))
+## Tervezett elemek
+### Kezdőképernyő: 
+Regisztráció (alap adatok megadása, személyes profil(testsúly, magasság, nem))
 
-• Sport kategóriák: gyaloglás, futás, kerékpár, stb.
- Import/export: kml, gpx
+### Főmenü:
 
-Tevékenység indítása:
-• Dashboard alap adatokkal – élő
-• Pozíció, sebesség, stb. tárolása
-• „energiatakarékos nézet”
-• Szünet lehetősége
+- Aznapi aktivitás megjelenítése, lépés, kalória és megtett táv adatokkal
+- Aktivitás történet melyben pár előző aktivitás jelenik meg azok adataival és időpontjával
+- Testsúly megjelenítése, rögzítés időpontjával
+### Edzés Menü:
+- Három fő sport megjelenítése (séta, futás, biciklizés), az adott sportban az össz megtett kilométer
+- Az adott sportokhoz tartozó aktivitások megjelenítése
+- Konkrét edzésekhez tartozó statisztiák megjelenítése(idő, táv, térképes nézet)
+- Gyerünk “gomb” amellyel el lehet kezdeni egy adott aktivitást
+### Aktivitás képernyő
+- Megjelenik az aktuális aktivitás távja, és sporttól függően más mértékegységben különböző statisztikák
+- Az adott aktivitás szüneteltethető és újra indítható, és természetesen megállítható.
+- Aktivitás végeztével az adatok elmentődnek a backenden, továbbá gpx letölthető a felhaszálónak
 
-Korábbi rekordok kezelése, összehasonlítás
+## Értesítések
+- Ha egy héten belül nem volt új testsúly érték rögzítve az appban akkor értesítést küld a felhasználónak az applikáció, hogy rögzzítsen egy újat
+- Ha aktivitás/tracking van folyamatban az értesítési sávon megjelenik az adott aktivitás statisztikái
+- Aktiális aktivitás közbeni kilométerek miatti értesítés(rezgés)
+- Minimális sebesség alácsökkenés jelzése
+- Napi cél elérése
+- Nap végéhez közeledve értesítés jelzése, hogy nem lett még elérve a napi cél
 
-• Tevékenység leállítása, összegzés
-• Challenge indítás
-activity végénél megosztás a statisztikáról, és a térképről egy png-ben
+## További featurek:
+- Daily, Weekly challanges, megjelenik egy adott táv, melyet teljesíteni lehet a felhaszálónak
 
-• Testsúly(heti egy értesítés róla), vízfogyasztás nyomkövetése(értesítés bizonyos időközönként) => BMI számolás 
+## Esetleges featurek
+- Spotify aktivitás kezdésekor felkinálja az app, hogy zenét szeretnél-e indítani ekkor megnyithatod a spotifyt.
 
-• Telefon szenzoraihoz hozzáférés( lépés számláló, gps)
-• Térképes nézet
-• Alap adatok megjelenítése, személyes statisztikák
-
-(SPOTIFY-ra külön gomb és adott activity kezdés előtt felkínálja, hogy indíts zenét az appon)
-dark mode
-angol/magyar nyelv
-mértékegység váltás
-értesítési sávban is megjelenjennek az adatok
+## Admin kliens feladata:
+Challangek kiírása melyekhez GPX-ben megadott útvonalakat kell teljesíteni vagy szabad útvonalakon adott távokat, ezekhez időintervallum megadása, hogy meddig lehet az adott challenget teljesíteni.
