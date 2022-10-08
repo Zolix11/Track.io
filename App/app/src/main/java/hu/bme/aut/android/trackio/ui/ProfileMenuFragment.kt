@@ -39,5 +39,8 @@ class ProfileMenuFragment : Fragment() {
         binding.btnProfileToHome.setOnClickListener {
             findNavController().navigate(R.id.action_profileMenuFragment_to_homeMenuFragment)
         }
+        binding.btnProfileToLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_profileMenuFragment_to_loginFragment)
+        }
     }
 }

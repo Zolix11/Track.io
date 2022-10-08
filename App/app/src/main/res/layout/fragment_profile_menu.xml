@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.ProfileMenuFragment">
+    tools:context=".ui.ProfileMenuFragment"
+    android:background="@drawable/profile_menu">
 
     <TextView
         android:id="@+id/textView"
@@ -14,46 +15,55 @@
 
     <Button
         android:id="@+id/btnProfileToMeasurementsDialog"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btnProfileToPersonal"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnProfileToHome"
+        app:layout_constraintRight_toLeftOf="@id/btnProfileToPersonal"
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="MEASUREMENTS"/>
 
     <Button
         android:id="@+id/btnProfileToPersonal"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btnProfileToHelp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnProfileToHome"
+        app:layout_constraintRight_toLeftOf="@id/btnProfileToHelp"
+        app:layout_constraintLeft_toRightOf="@id/btnProfileToMeasurementsDialog"
         android:text="PERSONAL"/>
 
     <Button
         android:id="@+id/btnProfileToHelp"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btnProfileToWorkout"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnProfileToHome"
+        app:layout_constraintRight_toLeftOf="@id/btnProfileToLogin"
+        app:layout_constraintLeft_toRightOf="@id/btnProfileToPersonal"
         android:text="HELP"/>
 
     <Button
-        android:id="@+id/btnProfileToWorkout"
-        android:layout_width="match_parent"
+        android:id="@+id/btnProfileToLogin"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/btnProfileToHome"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btnProfileToHelp"
+        android:text="SIGN OUT"/>
+
+    <Button
+        android:id="@+id/btnProfileToWorkout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/btnProfileToHome"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btnProfileToHome"
         android:text="WORKOUT"/>
 
     <Button
         android:id="@+id/btnProfileToHome"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnProfileToWorkout"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginBottom="48dp"
         android:text="HOME"/>

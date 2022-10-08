@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.HomeFragment">
+    tools:context=".ui.HomeFragment"
+    android:background="@drawable/home_menu">
 
     <TextView
         android:id="@+id/textView"
@@ -13,48 +14,48 @@
         android:text="HOME MENU FRAGMENT" />
 
     <Button
-        android:id="@+id/btnHomeToDetailedMeasurements"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btnHomeToDaily"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:text="MEASUREMENTS"/>
-
-    <Button
         android:id="@+id/btnHomeToDaily"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/btnHomeToWorkoutMenu"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnHomeToWorkoutHistory"
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="DAILY ACTIVITIES"/>
 
     <Button
-        android:id="@+id/btnHomeToWorkoutMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btnHomeToWorkoutHistory"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:text="WORKOUT MENU"/>
-
-    <Button
         android:id="@+id/btnHomeToWorkoutHistory"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btnHomeToProfile"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnHomeToWorkoutMenu"
+        app:layout_constraintRight_toLeftOf="@id/btnHomeToDetailedMeasurements"
+        app:layout_constraintLeft_toRightOf="@id/btnHomeToDaily"
         android:text="HISTORY"/>
 
     <Button
+        android:id="@+id/btnHomeToDetailedMeasurements"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btnHomeToWorkoutMenu"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btnHomeToWorkoutHistory"
+        android:text="MEASUREMENTS"/>
+
+    <Button
+        android:id="@+id/btnHomeToWorkoutMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/btnHomeToProfile"
+        app:layout_constraintRight_toLeftOf="@id/btnHomeToProfile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="WORKOUT"/>
+
+    <Button
         android:id="@+id/btnHomeToProfile"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btnHomeToWorkoutMenu"
         android:layout_marginBottom="48dp"
         android:text="PROFILE"/>
 
