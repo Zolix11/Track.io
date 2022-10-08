@@ -1,6 +1,12 @@
 const bodyParser = require('body-parser');
 const express = require('express');
-const http = require('http');
+const https = require('https');
+const fs = require('fs');
+
+const options = {
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem')
+};
 
 const app = express();
 
@@ -28,6 +34,4 @@ app.post('/posts', (req, res, next)=>{
   })
 })
 
-const server = http.createServer(app);
-
-server.listen(80);
+https.createServer(options, app).listen(443);
