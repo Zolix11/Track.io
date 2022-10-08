@@ -1,0 +1,36 @@
+/signup
+/login
+/userdetails
+GET: visszaadja az összesinfot
+/userdetails/setGoals
+PUT: cél beállítás
+GET: reddirct to userdetails
+/userdetails/setGender
+/userdetails/setWeight
+/userdetails/setGeight
+/userdetails/setWeightGoal
+/userdetails/setBirthDate
+/:dailyactivity
+
+/userworkouthistory
+GET: visszaadja a top 3edzést
+/userworkouthistory/runninghistory/lastweek
+/userworkouthistory/runninghistory/lastmoth
+/userworkouthistory/runninghistory/all
+/userworkouthistory/walkinghistory/lastweek
+/userworkouthistory/walkinghistory/lastmoth
+/userworkouthistory/walkinghistory/all
+/userworkouthistory/cyclinghistory/lastweek
+/userworkouthistory/cyclinghistory/lastmoth
+/userworkouthistory/cyclinghistory/all
+/userworkouthistory/:mapforhistory
+
+/challanges/walking/daily
+/challanges/walking/weakly
+/challanges/running/daily
+/challanges/running/weakly
+/challanges/cycling/daily
+/challanges/cycling/weakly
+
+/admin/login
+/admin/challanges
