@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.LoginFragment">
+    tools:context=".ui.LoginFragment"
+    android:background="@drawable/login">
 
     <TextView
         android:id="@+id/textView"
@@ -14,21 +15,21 @@
 
     <Button
         android:id="@+id/btnLoginToSignup"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btnLoginToHome"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/btnLoginToHome"
+        app:layout_constraintRight_toLeftOf="@id/btnLoginToHome"
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="SIGN UP"/>
 
     <Button
         android:id="@+id/btnLoginToHome"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btnLoginToSignup"
         android:layout_marginBottom="48dp"
-        android:text="HOME"/>
+        android:text="LOG IN / HOME"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
