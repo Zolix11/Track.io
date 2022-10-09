@@ -12,3 +12,4 @@
  - Backend routing kialakítása: Galuska Zoltán, Fogti István
  - Demo app készítése: Musa Abdullah
  - Mockup készítése (admin, client login, client daily activity): Ferencz Kincső
+
