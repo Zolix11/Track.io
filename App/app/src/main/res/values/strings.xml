@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Track.io</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="login__create_new_account"><u>Create new account</u></string>
+    <string name="login__log_in">Log in</string>
+    <string name="login__password">Password</string>
+    <string name="login__email_address">Email address</string>
 </resources>

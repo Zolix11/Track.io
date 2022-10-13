@@ -27,7 +27,7 @@ class LoginFragment : Fragment() {
         binding.btnLoginToHome.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_homeMenuFragment)
         }
-        binding.btnLoginToSignup.setOnClickListener {
+        binding.tvLoginToSignup.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
         }
     }
