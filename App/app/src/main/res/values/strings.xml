@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">Track.io</string>
 
-    <string name="login__create_new_account"><u>Create new account</u></string>
-    <string name="login__log_in">Log in</string>
-    <string name="login__password">Password</string>
-    <string name="login__email_address">Email address</string>
+<!--    Log in Fragment-->
+    <string name="create_new_account"><u>Create new account</u></string>
+    <string name="log_in">Log in</string>
+    <string name="password">Password</string>
+    <string name="email_address">Email address</string>
+
+
 </resources>

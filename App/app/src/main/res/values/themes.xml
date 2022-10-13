@@ -17,12 +17,12 @@
     </style>
 
     <style name="white_style" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="android:background">@drawable/et_background</item>
+        <item name="android:background">@drawable/white_background</item>
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">16dp</item>
     </style>
 
     <style name="blue_style" parent="ThemeOverlay.Material3.Button">
-        <item name="android:background">@drawable/btn_background</item>
+        <item name="android:background">@drawable/blue_background</item>
     </style>
 </resources>
