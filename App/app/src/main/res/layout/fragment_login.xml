@@ -8,7 +8,7 @@
     tools:context=".ui.LoginFragment">
 
     <TextView
-        android:id="@+id/tvLogIn"
+        android:id="@+id/tvSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
@@ -30,7 +30,7 @@
         android:autofillHints="emailAddress"
         app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
         app:layout_constraintRight_toRightOf="@id/rightGuideline"
-        app:layout_constraintTop_toBottomOf="@id/tvLogIn" />
+        app:layout_constraintTop_toBottomOf="@id/tvSignUp" />
 
     <EditText
         android:id="@+id/etPassword"

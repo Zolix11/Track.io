@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.navigation.fragment.findNavController
 import hu.bme.aut.android.trackio.R
 import hu.bme.aut.android.trackio.databinding.FragmentLoginBinding
@@ -25,11 +26,13 @@ class SignupFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.spGender.adapter = ArrayAdapter(requireContext(), R.layout.spinner_content_template, resources.getStringArray(R.array.genders))
+
         binding.btnSignupToHome.setOnClickListener {
             findNavController().navigate(R.id.action_signupFragment_to_homeMenuFragment)
         }
-        binding.btnSignupToLogin.setOnClickListener {
-            findNavController().navigate(R.id.action_signupFragment_to_loginFragment)
-        }
+//        binding.btnSignupToLogin.setOnClickListener {
+//            findNavController().navigate(R.id.action_signupFragment_to_loginFragment)
+//        }
     }
 }

@@ -7,5 +7,16 @@
     <string name="password">Password</string>
     <string name="email_address">Email address</string>
 
+<!--    Sign up Fragment-->
+    <string name="sign_up">Sign up</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="weight">Weight (kg)</string>
+    <string name="height">Height (cm)</string>
+    <string-array name="genders">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
 
 </resources>
