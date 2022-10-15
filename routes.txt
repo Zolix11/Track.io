@@ -1,36 +1,41 @@
-/signup
-/login
-/userdetails
-GET: visszaadja az összesinfot
-/userdetails/setGoals
-PUT: cél beállítás
-GET: reddirct to userdetails
-/userdetails/setGender
-/userdetails/setWeight
-/userdetails/setGeight
-/userdetails/setWeightGoal
-/userdetails/setBirthDate
-/:dailyactivity
+Szerver: 23.97.188.188:443
 
-/userworkouthistory
-GET: visszaadja a top 3edzést
-/userworkouthistory/runninghistory/lastweek
-/userworkouthistory/runninghistory/lastmoth
-/userworkouthistory/runninghistory/all
-/userworkouthistory/walkinghistory/lastweek
-/userworkouthistory/walkinghistory/lastmoth
-/userworkouthistory/walkinghistory/all
-/userworkouthistory/cyclinghistory/lastweek
-/userworkouthistory/cyclinghistory/lastmoth
-/userworkouthistory/cyclinghistory/all
-/userworkouthistory/:mapforhistory
+	/signup   post
+	/login --->post, name = "KisJano", passw = "asd123456"
+	/userdetails/all
+	GET: visszaadja az összesinfot
+	/userdetails/goals
+	PUT: cél beállítás
+	GET: reddirct to /all
+	/userdetails/setGender ---> post
+	/userdetails/weight ---> get/post
+	/userdetails/weightGoal post, ill get-->red: /all
+	/userdetails/BirthDate ---> csak get, redirect /all-hoz
+/:dailyActivity
 
-/challanges/walking/daily
-/challanges/walking/weakly
-/challanges/running/daily
-/challanges/running/weakly
-/challanges/cycling/daily
-/challanges/cycling/weakly
+GET-------------------------------
+/userWorkout/top3 --->GET: visszaadja a top 3edzést
+	/userWorkout/runningHistory/lastweek
+	/userWorkout/runningHistory/lastmoth
+	/userWorkout/runningHistory/all
+	/userWorkout/walkingHistory/lastweek
+	/userWorkout/walkingHistory/lastmoth
+	/userWorkout/walkingHistory/all
+	/userWorkout/cyclingHistory/lastweek
+	/userWorkout/cyclingHistory/lastmoth
+	/userWorkout/cyclingHistory/all    
+/userWorkout/:mapforHistory 
+POST-----------------------------------     
+/userWorkout/finishtraining      
 
-/admin/login
+GET-------------------------------------------
+	/challanges/walking/daily
+	/challanges/walking/weekly
+	/challanges/running/daily
+	/challanges/running/weekly
+	/challanges/cycling/daily
+	/challanges/cycling/weekly
+
+POST----------------------------------------------
+	/admin/login
 /admin/challanges
