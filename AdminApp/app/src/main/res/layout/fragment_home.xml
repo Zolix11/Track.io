@@ -1,44 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.HomeFragment"
-    android:background="@drawable/home">
+    android:background="@drawable/gradient_background"
+    tools:context=".ui.HomeFragment">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="HOME FRAGMENT" />
+        style="@style/topText"
+        android:layout_width="386dp"
+        android:layout_height="109dp"
+        android:text="Admin page"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnHomeToCurrent"
-        android:layout_width="0dp"
+        style="@style/wideButton"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/btnHomeToLogin"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/btnHomeToAdd"
-        android:text="CURRENT"/>
+        android:text="Current challanges>"
+        app:layout_constraintBottom_toTopOf="@+id/guideline13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        app:layout_constraintVertical_bias="0.552" />
 
     <Button
         android:id="@+id/btnHomeToAdd"
-        android:layout_width="0dp"
+        style="@style/wideButton"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/btnHomeToLogin"
-        app:layout_constraintLeft_toRightOf="@id/btnHomeToLogin"
-        app:layout_constraintRight_toLeftOf="@id/btnHomeToCurrent"
-        android:text="ADD"/>
+        android:text="Add new challange"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline9"
+        app:layout_constraintVertical_bias="0.706" />
 
     <Button
         android:id="@+id/btnHomeToLogin"
-        android:layout_width="0dp"
+        style="@style/wideButton"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/btnHomeToAdd"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginBottom="48dp"
-        android:text="LOG OUT"/>
+        android:layout_marginBottom="116dp"
+        android:text="LOG OUT"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline13"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="181dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="1056dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="413dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.62" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
