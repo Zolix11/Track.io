@@ -18,6 +18,7 @@ class CurrentChallengesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentCurrentChallengesBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
