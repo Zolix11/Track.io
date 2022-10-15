@@ -7,6 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+<!--    Light mode-->
     <color name="primary">#71C9CE</color>
     <color name="hint">#AAAAAA</color>
+
+<!--    Dark mode-->
+    <color name="primary_night">#60B8BD</color>
+    <color name="hint_night">#888888</color>
 </resources>

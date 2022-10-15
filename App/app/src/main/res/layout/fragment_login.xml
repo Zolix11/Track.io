@@ -11,35 +11,34 @@
         android:id="@+id/tvSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
         android:text="@string/log_in"
         android:textColor="@color/white"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/topGuideline" />
 
     <EditText
         android:id="@+id/etEmail"
+        style="@style/white_style"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginTop="120dp"
-        style="@style/white_style"
+        android:layout_marginVertical="16dp"
+        android:autofillHints="emailAddress"
         android:hint="@string/email_address"
         android:inputType="textEmailAddress"
-        android:autofillHints="emailAddress"
         app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
         app:layout_constraintRight_toRightOf="@id/rightGuideline"
-        app:layout_constraintTop_toBottomOf="@id/tvSignUp" />
+        app:layout_constraintTop_toBottomOf="@id/midGuideline" />
 
     <EditText
         android:id="@+id/etPassword"
+        style="@style/white_style"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginTop="36dp"
-        style="@style/white_style"
-        android:hint="@string/password"
+        android:layout_marginVertical="16dp"
         android:autofillHints="password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
         app:layout_constraintRight_toRightOf="@id/rightGuideline"
@@ -47,19 +46,20 @@
 
     <Button
         android:id="@+id/btnLoginToHome"
+        style="@style/blue_style"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/blue_style"
         android:text="@string/log_in"
-        app:layout_constraintTop_toBottomOf="@id/etPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
-        app:layout_constraintRight_toRightOf="@id/rightGuideline" />
+        app:layout_constraintRight_toRightOf="@id/rightGuideline"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
 
     <TextView
         android:id="@+id/tvLoginToSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
         android:text="@string/create_new_account"
         android:textColor="@color/primary"
         android:textSize="16sp"
@@ -73,13 +73,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="40dp" />
+        app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/rightGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="40dp" />
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/midGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
