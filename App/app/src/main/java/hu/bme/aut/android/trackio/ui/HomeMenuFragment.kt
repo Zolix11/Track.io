@@ -23,7 +23,7 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        /*super.onViewCreated(view, savedInstanceState)
 
         binding.btnHomeToDaily.setOnClickListener {
             findNavController().navigate(R.id.action_homeMenuFragment_to_dailyActivitiesFragment)
@@ -32,13 +32,34 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_homeMenuFragment_to_profileMenuFragment)
         }
         binding.btnHomeToDetailedMeasurements.setOnClickListener {
-            findNavController().navigate(R.id.action_homeMenuFragment_to_detailedMeasurementsFragment)
+            )
         }
         binding.btnHomeToWorkoutMenu.setOnClickListener {
             findNavController().navigate(R.id.action_homeMenuFragment_to_workoutMenuFragment)
         }
         binding.btnHomeToWorkoutHistory.setOnClickListener {
+            findNavController().navigate()
+        }*/
+        binding.imageView4.setOnClickListener {
+            findNavController().navigate(R.id.action_homeMenuFragment_to_detailedMeasurementsFragment)
+        }
+
+        binding.btnHomeToDaily.setOnClickListener {
+            findNavController().navigate(R.id.action_homeMenuFragment_to_dailyActivitiesFragment)
+        }
+
+        binding.imageView7.setOnClickListener{
+            findNavController().navigate(R.id.action_homeMenuFragment_to_workoutHistoryFragment)
+        }
+
+        binding.imageView6.setOnClickListener{
+            findNavController().navigate(R.id.action_homeMenuFragment_to_workoutHistoryFragment)
+        }
+
+        binding.imageView5.setOnClickListener{
             findNavController().navigate(R.id.action_homeMenuFragment_to_workoutHistoryFragment)
         }
     }
+
+
 }
