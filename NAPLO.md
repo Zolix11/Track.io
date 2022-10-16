@@ -13,3 +13,8 @@
  - Demo app készítése: Musa Abdullah
  - Mockup készítése (admin, client login, client daily activity): Ferencz Kincső
 
+### 6. hét
+ - Galuska Zoltán: PastWorkoutFragment, WorkoutHistoryFragment, AddChallengeFragment, CurrentChallengesFragment, HomeFragment, LoginFragment
+ - Musa Abdullah: LoginFragment, WorkoutMapFragment, WorkoutMenuFragment, DuringWorkoutFragment, MeasurementsDialogFragment, PersonalDialogFragment, SignupFragment 
+ - Ferencz Kincső: DailyActivitiesFragment, DetailedMeasurementsFragment, HelpFragment, HomeMenuFragment
+ - Fogti István: backend (retrofit, dummyserver)
