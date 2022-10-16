@@ -26,4 +26,8 @@
     <style name="blue_style" parent="ThemeOverlay.Material3.Button">
         <item name="android:background">@drawable/blue_background</item>
     </style>
+
+    <style name="round_blue_style" parent="ThemeOverlay.Material3.Button">
+        <item name="android:background">@drawable/round_blue</item>
+    </style>
 </resources>
