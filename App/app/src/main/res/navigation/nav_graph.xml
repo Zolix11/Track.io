@@ -87,7 +87,7 @@
             android:id="@+id/action_profileMenuFragment_to_personalDialogFragment"
             app:destination="@id/personalDialogFragment" />
         <action
-            android:id="@+id/action_profileMenuFragment_to_workoutMenuFragment3"
+            android:id="@+id/action_profileMenuFragment_to_workoutMenuFragment"
             app:destination="@id/workoutMenuFragment" />
         <action
             android:id="@+id/action_profileMenuFragment_to_loginFragment"

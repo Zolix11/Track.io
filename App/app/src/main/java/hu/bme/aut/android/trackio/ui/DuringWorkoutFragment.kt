@@ -27,8 +27,11 @@ class DuringWorkoutFragment : Fragment() {
         binding.btnDuringToMap.setOnClickListener {
             findNavController().navigate(R.id.action_duringWorkoutFragment_to_workoutMapFragment)
         }
-        binding.btnDuringToWorkoutMenu.setOnClickListener {
-            findNavController().navigate(R.id.action_duringWorkoutFragment_to_workoutMenuFragment)
+        binding.btnPlayPause.setOnClickListener {
+            binding.btnPlayPause.isActivated = !binding.btnPlayPause.isActivated
         }
+//        binding.btnDuringToWorkoutMenu.setOnClickListener {
+//            findNavController().navigate(R.id.action_duringWorkoutFragment_to_workoutMenuFragment)
+//        }
     }
 }

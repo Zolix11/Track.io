@@ -10,7 +10,7 @@ import hu.bme.aut.android.trackio.R
 import hu.bme.aut.android.trackio.databinding.FragmentWorkoutMenuBinding
 
 class WorkoutMenuFragment : Fragment() {
-    private lateinit var binding : FragmentWorkoutMenuBinding
+    private lateinit var binding : FragmentworkoutMenuBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,14 +24,33 @@ class WorkoutMenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnWorkoutToHome.setOnClickListener {
-            findNavController().navigate(R.id.action_workoutMenuFragment_to_homeMenuFragment)
-        }
-        binding.btnWorkoutToDuring.setOnClickListener {
+//        binding.btnWorkoutToHome.setOnClickListener {
+//            findNavController().navigate(R.id.action_workoutMenuFragment_to_homeMenuFragment)
+//        }
+//        binding.btnWorkoutToDuring.setOnClickListener {
+//            findNavController().navigate(R.id.action_workoutMenuFragment_to_duringWorkoutFragment)
+//        }
+//        binding.btnWorkoutToProfile.setOnClickListener {
+//            findNavController().navigate(R.id.action_workoutMenuFragment_to_profileMenuFragment)
+//        }
+
+        binding.btnStartWorkout.setOnClickListener {
             findNavController().navigate(R.id.action_workoutMenuFragment_to_duringWorkoutFragment)
         }
-        binding.btnWorkoutToProfile.setOnClickListener {
-            findNavController().navigate(R.id.action_workoutMenuFragment_to_profileMenuFragment)
+
+        binding.tbNavigation.inflateMenu(R.menu.navigation_menu)
+        binding.tbNavigation.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.home_menu -> {
+                    findNavController().navigate(R.id.action_workoutMenuFragment_to_homeMenuFragment)
+                    true
+                }
+                R.id.profile_menu -> {
+                    findNavController().navigate(R.id.action_workoutMenuFragment_to_profileMenuFragment)
+                    true
+                }
+                else -> false
+            }
         }
     }
 }

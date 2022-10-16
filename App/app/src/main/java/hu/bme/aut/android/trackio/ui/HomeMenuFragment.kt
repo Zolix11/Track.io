@@ -1,10 +1,9 @@
 package hu.bme.aut.android.trackio.ui
 
 import android.os.Bundle
+import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import hu.bme.aut.android.trackio.R
 import hu.bme.aut.android.trackio.databinding.FragmentHomeMenuBinding
@@ -23,7 +22,7 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        /*super.onViewCreated(view, savedInstanceState)
 
         binding.btnHomeToDaily.setOnClickListener {
             findNavController().navigate(R.id.action_homeMenuFragment_to_dailyActivitiesFragment)
@@ -32,13 +31,47 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_homeMenuFragment_to_profileMenuFragment)
         }
         binding.btnHomeToDetailedMeasurements.setOnClickListener {
-            findNavController().navigate(R.id.action_homeMenuFragment_to_detailedMeasurementsFragment)
+            )
         }
         binding.btnHomeToWorkoutMenu.setOnClickListener {
             findNavController().navigate(R.id.action_homeMenuFragment_to_workoutMenuFragment)
         }
         binding.btnHomeToWorkoutHistory.setOnClickListener {
+            findNavController().navigate()
+        }*/
+        binding.imageView4.setOnClickListener {
+            findNavController().navigate(R.id.action_homeMenuFragment_to_detailedMeasurementsFragment)
+        }
+
+        binding.btnHomeToDaily.setOnClickListener {
+            findNavController().navigate(R.id.action_homeMenuFragment_to_dailyActivitiesFragment)
+        }
+
+        binding.imageView7.setOnClickListener{
             findNavController().navigate(R.id.action_homeMenuFragment_to_workoutHistoryFragment)
+        }
+
+        binding.imageView6.setOnClickListener{
+            findNavController().navigate(R.id.action_homeMenuFragment_to_workoutHistoryFragment)
+        }
+
+        binding.imageView5.setOnClickListener{
+            findNavController().navigate(R.id.action_homeMenuFragment_to_workoutHistoryFragment)
+        }
+
+        binding.tbNavigation.inflateMenu(R.menu.navigation_menu)
+        binding.tbNavigation.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.workout_menu -> {
+                    findNavController().navigate(R.id.action_homeMenuFragment_to_workoutMenuFragment)
+                    true
+                }
+                R.id.profile_menu -> {
+                    findNavController().navigate(R.id.action_homeMenuFragment_to_profileMenuFragment)
+                    true
+                }
+                else -> false
+            }
         }
     }
 }

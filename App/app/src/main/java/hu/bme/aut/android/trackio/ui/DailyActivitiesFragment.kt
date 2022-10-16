@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import hu.bme.aut.android.trackio.R
 import hu.bme.aut.android.trackio.databinding.FragmentDailyActivitiesBinding
 
@@ -19,4 +20,6 @@ class DailyActivitiesFragment : Fragment() {
         binding = FragmentDailyActivitiesBinding.inflate(inflater, container, false)
         return binding.root
     }
+
+
 }

@@ -24,8 +24,10 @@ class DetailedMeasurementsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnDetailedMeasurementsToMeasurementsDialog.setOnClickListener {
+        /*binding.btnDetailedMeasurementsToMeasurementsDialog.setOnClickListener {
             findNavController().navigate(R.id.action_detailedMeasurementsFragment_to_measurementsDialogFragment)
-        }
+        }*/
+
+
     }
 }
