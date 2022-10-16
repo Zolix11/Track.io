@@ -27,12 +27,12 @@ class ProfileMenuFragment : Fragment() {
         binding.btnProfileToHelp.setOnClickListener {
             findNavController().navigate(R.id.action_profileMenuFragment_to_helpFragment)
         }
-        binding.btnProfileToPersonal.setOnClickListener {
-            findNavController().navigate(R.id.action_profileMenuFragment_to_personalDialogFragment)
-        }
-        binding.btnProfileToMeasurementsDialog.setOnClickListener {
-            findNavController().navigate(R.id.action_profileMenuFragment_to_measurementsDialogFragment)
-        }
+//        binding.btnProfileToPersonal.setOnClickListener {
+//            findNavController().navigate(R.id.action_profileMenuFragment_to_personalDialogFragment)
+//        }
+//        binding.btnProfileToMeasurementsDialog.setOnClickListener {
+//            findNavController().navigate(R.id.action_profileMenuFragment_to_measurementsDialogFragment)
+//        }
         binding.btnProfileToWorkout.setOnClickListener {
             findNavController().navigate(R.id.action_profileMenuFragment_to_workoutMenuFragment)
         }
@@ -56,6 +56,13 @@ class ProfileMenuFragment : Fragment() {
                 }
                 else -> false
             }
+        }
+
+        binding.btnProfileToPersonal.setOnClickListener {
+            PersonalDialogFragment().show(childFragmentManager, PersonalDialogFragment.TAG)
+        }
+        binding.btnProfileToMeasurementsDialog.setOnClickListener {
+            MeasurementsDialogFragment().show(childFragmentManager, MeasurementsDialogFragment.TAG)
         }
     }
 }

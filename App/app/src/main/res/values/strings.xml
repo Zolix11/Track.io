@@ -27,6 +27,9 @@
     <string name="play_and_pause_button">Play and pause button</string>
     <string name="heart_rate">Heart rate</string>
     <string name="time">Time</string>
+    <string name="current">Current</string>
+    <string name="goal">Goal</string>
+    <string name="daily_steps">Daily steps</string>
     <string-array name="genders">
         <item>Male</item>
         <item>Female</item>

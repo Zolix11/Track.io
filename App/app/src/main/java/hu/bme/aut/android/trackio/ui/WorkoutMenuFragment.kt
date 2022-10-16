@@ -10,7 +10,7 @@ import hu.bme.aut.android.trackio.R
 import hu.bme.aut.android.trackio.databinding.FragmentWorkoutMenuBinding
 
 class WorkoutMenuFragment : Fragment() {
-    private lateinit var binding : FragmentworkoutMenuBinding
+    private lateinit var binding : FragmentWorkoutMenuBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
