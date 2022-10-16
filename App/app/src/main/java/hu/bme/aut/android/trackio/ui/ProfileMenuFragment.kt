@@ -34,13 +34,28 @@ class ProfileMenuFragment : Fragment() {
             findNavController().navigate(R.id.action_profileMenuFragment_to_measurementsDialogFragment)
         }
         binding.btnProfileToWorkout.setOnClickListener {
-            findNavController().navigate(R.id.action_profileMenuFragment_to_workoutMenuFragment3)
+            findNavController().navigate(R.id.action_profileMenuFragment_to_workoutMenuFragment)
         }
         binding.btnProfileToHome.setOnClickListener {
             findNavController().navigate(R.id.action_profileMenuFragment_to_homeMenuFragment)
         }
         binding.btnProfileToLogin.setOnClickListener {
             findNavController().navigate(R.id.action_profileMenuFragment_to_loginFragment)
+        }
+
+        binding.tbNavigation.inflateMenu(R.menu.navigation_menu)
+        binding.tbNavigation.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.home_menu -> {
+                    findNavController().navigate(R.id.action_profileMenuFragment_to_homeMenuFragment)
+                    true
+                }
+                R.id.workout_menu -> {
+                    findNavController().navigate(R.id.action_profileMenuFragment_to_workoutMenuFragment)
+                    true
+                }
+                else -> false
+            }
         }
     }
 }

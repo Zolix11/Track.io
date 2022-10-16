@@ -13,6 +13,9 @@
     <string name="last_name">Last Name</string>
     <string name="weight">Weight (kg)</string>
     <string name="height">Height (cm)</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="workout">Workout</string>
     <string-array name="genders">
         <item>Male</item>
         <item>Female</item>

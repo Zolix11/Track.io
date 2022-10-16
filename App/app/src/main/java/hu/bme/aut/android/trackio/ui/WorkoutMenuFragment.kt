@@ -33,5 +33,20 @@ class WorkoutMenuFragment : Fragment() {
         binding.btnWorkoutToProfile.setOnClickListener {
             findNavController().navigate(R.id.action_workoutMenuFragment_to_profileMenuFragment)
         }
+
+        binding.tbNavigation.inflateMenu(R.menu.navigation_menu)
+        binding.tbNavigation.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.home_menu -> {
+                    findNavController().navigate(R.id.action_workoutMenuFragment_to_homeMenuFragment)
+                    true
+                }
+                R.id.profile_menu -> {
+                    findNavController().navigate(R.id.action_workoutMenuFragment_to_profileMenuFragment)
+                    true
+                }
+                else -> false
+            }
+        }
     }
 }
