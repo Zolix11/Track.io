@@ -56,19 +56,19 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="@id/midGuideline"
+        app:layout_constraintRight_toRightOf="@id/dailyGuideline"
         app:layout_constraintTop_toBottomOf="@id/tvDistanceUnit" />
 
     <TextView
         android:id="@+id/tvTimeTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time"
+        android:text="@string/time"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="@id/midGuideline"
+        app:layout_constraintRight_toRightOf="@id/dailyGuideline"
         app:layout_constraintTop_toBottomOf="@id/tvTimeValue" />
 
     <TextView
@@ -80,7 +80,7 @@
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="@id/midGuideline"
+        app:layout_constraintLeft_toLeftOf="@id/dailyGuideline"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvDistanceUnit" />
 
@@ -88,11 +88,11 @@
         android:id="@+id/tvHeartRateTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Heart rate"
+        android:text="@string/heart_rate"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="@id/midGuideline"
+        app:layout_constraintLeft_toLeftOf="@id/dailyGuideline"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvHeartRateValue" />
 
@@ -103,7 +103,8 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/ic_baseline_location_on_24"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/map"/>
 
     <ImageButton
         android:id="@+id/btnPlayPause"
@@ -115,10 +116,11 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.8"
+        android:contentDescription="@string/play_and_pause_button"/>
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/midGuideline"
+        android:id="@+id/dailyGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
