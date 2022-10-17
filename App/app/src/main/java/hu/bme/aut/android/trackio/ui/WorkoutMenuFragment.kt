@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.children
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import hu.bme.aut.android.trackio.R
 import hu.bme.aut.android.trackio.databinding.FragmentWorkoutMenuBinding
 
@@ -39,14 +41,17 @@ class WorkoutMenuFragment : Fragment() {
         }
 
         binding.tbNavigation.inflateMenu(R.menu.navigation_menu)
-        binding.tbNavigation.setOnMenuItemClickListener {
+        binding.tbNavigation.setupWithNavController(findNavController())
+        binding.tbNavigation.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.home_menu -> {
                     findNavController().navigate(R.id.action_workoutMenuFragment_to_homeMenuFragment)
+//                    it.isChecked = true
                     true
                 }
                 R.id.profile_menu -> {
                     findNavController().navigate(R.id.action_workoutMenuFragment_to_profileMenuFragment)
+//                    it.isChecked = true
                     true
                 }
                 else -> false

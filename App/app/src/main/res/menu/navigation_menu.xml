@@ -8,7 +8,7 @@
             android:actionLayout="@layout/menu_item_home"
             android:title="@string/home"
             app:showAsAction="ifRoom|withText"
-            android:checked="true"/>
+            android:checked="false"/>
 
         <item
             android:id="@+id/workout_menu"

@@ -68,7 +68,7 @@
         android:layout_marginBottom="48dp"
         android:text="HOME"/>
 
-    <androidx.appcompat.widget.Toolbar
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/tb_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

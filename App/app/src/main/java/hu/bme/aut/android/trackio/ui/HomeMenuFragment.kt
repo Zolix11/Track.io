@@ -5,6 +5,7 @@ import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import hu.bme.aut.android.trackio.R
 import hu.bme.aut.android.trackio.databinding.FragmentHomeMenuBinding
 import hu.bme.aut.android.trackio.databinding.FragmentLoginBinding
@@ -60,7 +61,8 @@ class HomeFragment : Fragment() {
         }
 
         binding.tbNavigation.inflateMenu(R.menu.navigation_menu)
-        binding.tbNavigation.setOnMenuItemClickListener {
+        binding.tbNavigation.setupWithNavController(findNavController())
+        binding.tbNavigation.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.workout_menu -> {
                     findNavController().navigate(R.id.action_homeMenuFragment_to_workoutMenuFragment)
