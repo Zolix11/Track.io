@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:textColorHint">@color/hint_night</item>
+        <item name="android:textColorHint">@color/hint</item>
     </style>
 
     <style name="white_style" parent="Theme.Trackio">

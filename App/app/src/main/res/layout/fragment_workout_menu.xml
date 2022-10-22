@@ -59,10 +59,11 @@
             android:gravity="center_horizontal"/>
 
         <LinearLayout
-                android:id="@+id/llChallengesBackground"
+                android:id="@+id/llGoalsAndMeasurements"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/white_background"
+                style="@style/white_style"
+                android:paddingHorizontal="0dp"
                 app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
                 app:layout_constraintRight_toRightOf="@id/rightGuideline"
                 app:layout_constraintTop_toTopOf="@id/tvRunningMode"
@@ -91,7 +92,7 @@
                 android:layout_marginVertical="12dp">
 
                 <TextView
-                    android:id="@+id/tvDailyTitle"
+                    android:id="@+id/tvSetGoalsTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/trebucbd"
@@ -128,12 +129,12 @@
                     android:textSize="18sp"
                     android:paddingVertical="8dp"
                     android:paddingLeft="8dp"
-                    app:layout_constraintRight_toLeftOf="@id/tvDailyMetric"
+                    app:layout_constraintRight_toLeftOf="@id/tvSetGoalsValues"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"/>
 
                 <TextView
-                    android:id="@+id/tvDailyMetric"
+                    android:id="@+id/tvSetGoalsValues"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/trebucbd"
@@ -248,7 +249,7 @@
             android:adjustViewBounds="true"
             app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
             app:layout_constraintRight_toRightOf="@id/rightGuideline"
-            app:layout_constraintTop_toBottomOf="@id/llChallengesBackground"
+            app:layout_constraintTop_toBottomOf="@id/llGoalsAndMeasurements"
             android:contentDescription="@string/map"/>
 
         <Button

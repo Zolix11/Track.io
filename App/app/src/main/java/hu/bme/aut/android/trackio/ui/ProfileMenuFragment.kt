@@ -25,7 +25,7 @@ class ProfileMenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnProfileToHelp.setOnClickListener {
+        binding.clHelp.setOnClickListener {
             findNavController().navigate(R.id.action_profileMenuFragment_to_helpFragment)
         }
 //        binding.btnProfileToPersonal.setOnClickListener {
@@ -34,13 +34,13 @@ class ProfileMenuFragment : Fragment() {
 //        binding.btnProfileToMeasurementsDialog.setOnClickListener {
 //            findNavController().navigate(R.id.action_profileMenuFragment_to_measurementsDialogFragment)
 //        }
-        binding.btnProfileToWorkout.setOnClickListener {
-            findNavController().navigate(R.id.action_profileMenuFragment_to_workoutMenuFragment)
-        }
-        binding.btnProfileToHome.setOnClickListener {
-            findNavController().navigate(R.id.action_profileMenuFragment_to_homeMenuFragment)
-        }
-        binding.btnProfileToLogin.setOnClickListener {
+//        binding.btnProfileToWorkout.setOnClickListener {
+//            findNavController().navigate(R.id.action_profileMenuFragment_to_workoutMenuFragment)
+//        }
+//        binding.btnProfileToHome.setOnClickListener {
+//            findNavController().navigate(R.id.action_profileMenuFragment_to_homeMenuFragment)
+//        }
+        binding.clSignOut.setOnClickListener {
             findNavController().navigate(R.id.action_profileMenuFragment_to_loginFragment)
         }
 
@@ -60,10 +60,20 @@ class ProfileMenuFragment : Fragment() {
             }
         }
 
-        binding.btnProfileToPersonal.setOnClickListener {
+        binding.clGender.setOnClickListener {
             PersonalDialogFragment().show(childFragmentManager, PersonalDialogFragment.TAG)
         }
-        binding.btnProfileToMeasurementsDialog.setOnClickListener {
+
+        binding.clBirthDate.setOnClickListener {
+            PersonalDialogFragment().show(childFragmentManager, PersonalDialogFragment.TAG)
+        }
+        binding.clSetGoals.setOnClickListener {
+            MeasurementsDialogFragment().show(childFragmentManager, MeasurementsDialogFragment.TAG)
+        }
+        binding.clWeight.setOnClickListener {
+            MeasurementsDialogFragment().show(childFragmentManager, MeasurementsDialogFragment.TAG)
+        }
+        binding.clHeight.setOnClickListener {
             MeasurementsDialogFragment().show(childFragmentManager, MeasurementsDialogFragment.TAG)
         }
     }
