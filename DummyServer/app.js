@@ -3,13 +3,13 @@ const express = require('express')
 const https = require('https')
 const fs = require('fs')
 const bcrypt = require('bcrypt')
-const {body} = require('express-validator/check')
+const {body} = require('express-validator')
 
 const adminRoutes = require('./routes/admin')
 const challangeRoutes = require('./routes/challenges')
 const userdetRoutes = require('./routes/userdetails')
 const userworkRoutes = require('./routes/userworkout')
-const authRoutes = require('./controllers/auth')
+const authRoutes = require('./routes/auth')
 const isAuth = require('./middleware/is-auth')
 
 const users = []

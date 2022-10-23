@@ -1,4 +1,4 @@
-const {validationResult} = require('express-validator/check')
+const {validationResult} = require('express-validator')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken');
 
@@ -45,7 +45,9 @@ exports.Signup = (req, res, next) =>{
     });
 
 
-    exports.login = (req, res, next) =>{
+   
+}
+ exports.login = (req, res, next) =>{
         const email = req.body.email;
         const password = req.body.password;
         let loadedUser;
@@ -75,4 +77,3 @@ exports.Signup = (req, res, next) =>{
                 next(err);
             })
     }
-}
