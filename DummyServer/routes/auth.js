@@ -1,29 +1,16 @@
-const express = require('express')
+const express = require('express');
+const {body} = require('express-validator/check')
+const authCont = require('../controllers/auth')
 
-const router = express.Router()
+const router = express.Router();
 
-router.post('/signup', (req, res, next) =>{
-    try{
-      const hashedPassword = bcrypt.hash(req.body.password, 10)
-      users.push({
-        id: Date.now().toString(),
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        email: req.body.email,
-        gender: req.body.gender,
-        weight: req.body.weight,
-        height: req.body.height,
-        dateOfBirth: req.body.dateOfBirth,
-        password: hashedPassword
-      })
-      res.status(200)
-    }catch{
-      res.status(400)
-    }
-})
+router.post('/signup', [
+    body('email').isEmail().withMessage("Please enter a vald email."), 
+    body('password').trim().isLength({min: 5}),
+    body('firstname').trim().not().isEmpty(),
+    body('lasttname').trim().not().isEmpty()
+], authCont.Signup);
 
-router.post('/login', (req, res, next)=>{
+router.post('/login',authCont.login);
 
-})
-
-module.exports = router
+module.exports = router;
